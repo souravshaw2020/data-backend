@@ -16,7 +16,8 @@ app.get("/", (req, res) => {
 
 app.post("/register", async (req, res) => {
     const dbMessages = req.body
-    res.json({message: dbMessages});
+    // res.json({message: dbMessages});
+    // res.setHeader('Content-Type','application/json');
 
     await register.create(dbMessages, (err, data) => {
         if(err){
